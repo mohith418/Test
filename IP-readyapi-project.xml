@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="de81301f-c356-459c-a609-06ac106a6d73" created="3.3.2" activeEnvironment="Default environment" name="IP" updated="3.3.2 2020-08-19T12:03:33Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="de81301f-c356-459c-a609-06ac106a6d73" created="3.3.2" activeEnvironment="Default" name="IP" updated="3.3.2 2020-08-19T12:03:33Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.6.0" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Report Format(s)" value="XML"/>
   <con:entry key="Host:Port" value=""/>
   <con:entry key="Export JUnit Results" value="true"/>
@@ -35,7 +35,81 @@
   <con:entry key="Domain" value=""/>
   <con:entry key="Tool Args" value=""/>
   <con:entry key="Save Project" value="false"/>
-</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="66855ea6-7a42-4dea-8f59-c139af858d7c" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ip.jsontest.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://ip.jsontest.com</con:endpoint></con:endpoints><con:resource name="IP" path="/" id="0c5d9019-2587-4676-9121-a7480c40be89"><con:settings/><con:parameters/><con:method name="IP" id="90f69bdc-eeba-4165-aa52-806682b769e1" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ip="http://ip.jsontest.com/">ip:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="IP" id="4047731d-4d48-4206-8bf4-ba64fc1c9c64" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://ip.jsontest.com</con:endpoint><con:request>{"property" : ["Sites"], "report_type" : ["ALL"]}</con:request><con:originalUri>http://ip.jsontest.com/</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="d1db7104-a6c4-48ff-ae36-80457e81ab3d" name="IP_TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d0bcf92a-9c27-47b4-a200-a319de3a640e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="IP_TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="Request1" id="87289e80-0854-48de-8433-512f9011cac0"><con:settings/><con:config service="http://ip.jsontest.com" methodName="IP" resourcePath="/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request1" id="d036e225-2f7e-4cbd-8a47-856d8ffd9283" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ip.jsontest.com</con:endpoint><con:request>{"property" : ["Sites"], "report_type" : ["ALL"]}</con:request><con:originalUri>http://ip.jsontest.com/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="5cd9d1ac-3b7c-4aaa-a204-4ee8ef31835d" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="8d50d9c3-4a16-4f0a-b3f1-9585f9706080" name="Response SLA"><con:configuration><SLA>6000</SLA></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Request2" id="5382fd04-5461-4754-a9b7-6326a3f7d143"><con:settings/><con:config service="http://ip.jsontest.com" methodName="IP" resourcePath="/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request2" id="d036e225-2f7e-4cbd-8a47-856d8ffd9283" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ip.jsontest.com</con:endpoint><con:request>{"property" : ["Cities"], "report_type" : ["ALL"]}</con:request><con:originalUri>http://ip.jsontest.com/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="5cd9d1ac-3b7c-4aaa-a204-4ee8ef31835d" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="8d50d9c3-4a16-4f0a-b3f1-9585f9706080" name="Response SLA"><con:configuration><SLA>6000</SLA></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="66855ea6-7a42-4dea-8f59-c139af858d7c" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ip.jsontest.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://ip.jsontest.com</con:endpoint></con:endpoints><con:resource name="IP" path="/" id="0c5d9019-2587-4676-9121-a7480c40be89"><con:settings/><con:parameters/><con:method name="IP" id="90f69bdc-eeba-4165-aa52-806682b769e1" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ip="http://ip.jsontest.com/">ip:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="IP" id="4047731d-4d48-4206-8bf4-ba64fc1c9c64" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://ip.jsontest.com</con:endpoint><con:request>{"property" : ["Sites"], "report_type" : ["ALL"]}</con:request><con:originalUri>http://ip.jsontest.com/</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="d1db7104-a6c4-48ff-ae36-80457e81ab3d" name="IP_TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d0bcf92a-9c27-47b4-a200-a319de3a640e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="IP_TestCase" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="groovy" name="Groovy Script" id="28ca965e-7e62-4cbc-9447-1eb4e81976c6"><con:settings/><con:config><script>import jxl.*
+import jxl.write.*
+import java.io.*;
+import com.eviware.soapui.support.*;
+//*********************************//
+// Providing the xlx file Location
+try{
+def file = new File("F:\\Test_1\\TestData.xls");
+def wk = Workbook.getWorkbook(file);
+def sheet = wk.getSheet("Sheet1");
+//*********************************//
+// Extracting the data from Rows c1,c2
+def r = sheet.getRows();
+def c1 = sheet.getCell(0, 0)
+def c2 = sheet.getCell(0, 1)
+//*********************************//
+// Printing the data of C1,C2
+def value1 = c1.getContents()
+def value2 = c2.getContents()
+log.info(value1)
+log.info(value2)
+// Setting the Values at TestSuiteLeverl
+testRunner.testCase.testSuite.setPropertyValue("input1",value1)
+testRunner.testCase.testSuite.setPropertyValue("input2",value2)
+}
+//*********************************//
+//Catching Test Exception
+catch(Exception e){
+log.error(e)	
+}</script></con:config></con:testStep><con:testStep type="groovy" name="Assretion" id="698e9d8a-6f5a-45f9-80cf-427052f39459"><con:settings/><con:config><script>def tCase = testRunner.testCase.testSuite.testCases["IP_TestCase"]
+def tStep1 = tCase.testSteps["Request1"]
+tStep1.run(testRunner, context)
+def tStep2 = tCase.testSteps["Request2"]
+tStep2.run(testRunner, context)
+
+//*********************************//
+//Request-1
+import groovy.json.JsonSlurper
+responseContent = testRunner.testCase.getTestStepByName("Request1").getPropertyValue("response")
+slurperresponse = new JsonSlurper().parseText(responseContent)
+
+def value1=slurperresponse.ip
+log.info(value1)
+data = null
+if(value1!=null){
+data="Success"	
+}
+else{
+data="Fail"
+}
+assert data.contains("Success") == true,"Assertion Passed values is $ip"
+
+//*********************************//
+//Request-2 
+import groovy.json.JsonSlurper
+responseContent = testRunner.testCase.getTestStepByName("Request2").getPropertyValue("response")
+slurperresponse = new JsonSlurper().parseText(responseContent)
+
+def value2=slurperresponse.ip
+log.info(value2)
+data = null
+if(value2!=null){
+data="Success"	
+}
+else{
+data="Fail"
+}
+assert data.contains("Success") == true,"Assertion Passed values is $ip"</script></con:config></con:testStep><con:testStep type="restrequest" name="Request1" id="87289e80-0854-48de-8433-512f9011cac0"><con:settings/><con:config service="http://ip.jsontest.com" methodName="IP" resourcePath="/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request1" id="d036e225-2f7e-4cbd-8a47-856d8ffd9283" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ip.jsontest.com</con:endpoint><con:request>{
+"property" : ["${#TestSuite#input1}"], 
+"report_type" : ["${#TestSuite#input2}"]
+}</con:request><con:originalUri>http://ip.jsontest.com/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="5cd9d1ac-3b7c-4aaa-a204-4ee8ef31835d" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="8d50d9c3-4a16-4f0a-b3f1-9585f9706080" name="Response SLA"><con:configuration><SLA>6000</SLA></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Request2" id="5382fd04-5461-4754-a9b7-6326a3f7d143"><con:settings/><con:config service="http://ip.jsontest.com" methodName="IP" resourcePath="/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request2" id="d036e225-2f7e-4cbd-8a47-856d8ffd9283" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ip.jsontest.com</con:endpoint><con:request>{
+"property" : ["${#TestSuite#input1}"], 
+"report_type" : ["${#TestSuite#input2}"]
+}</con:request><con:originalUri>http://ip.jsontest.com/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="5cd9d1ac-3b7c-4aaa-a204-4ee8ef31835d" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="8d50d9c3-4a16-4f0a-b3f1-9585f9706080" name="Response SLA"><con:configuration><SLA>6000</SLA></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="0db5619c-6e6e-41b2-a150-03ac59565490" name="JsonPath Match"><con:configuration><path>ip</path><content>175.101.108.16</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Clear" id="804890d5-4bb2-448c-85ae-cd3bd361666e"><con:settings/><con:config><script>testRunner.testCase.testSuite.setPropertyValue("input1",null)
+testRunner.testCase.testSuite.setPropertyValue("input2",null)</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties><con:property><con:name>input1</con:name><con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:property><con:property><con:name>input2</con:name><con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:property></con:properties><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to SoapUI Pro tests
 
 // If hardcoding the token, uncomment and change line 5
