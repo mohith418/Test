@@ -9,7 +9,7 @@ node('master') {
   
  stage('Test') {
  bat 'copy C:\\Users\\mohit\\.jenkins\\workspace\\Soap_check\\IP-Soap-project.xml F:\\Test_1\\new'
- bat 'F:\\SoapUI-5.6.0\\bin\\testrunner.bat -sTestSuite2 F:\\Test_1\\new\\IP-Soap-project.xml"'
+ bat 'F:\\SoapUI-5.6.0\\bin\\testrunner.bat -sTestSuite2 -r -a -j -J -f F:\\Test_1\\new\\IP-Soap-project.xml"'
   }
  
   stage('Deploy') {
