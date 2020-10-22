@@ -1,0 +1,18 @@
+node('master') {
+  stage('Build') {
+    echo 'make'
+  }
+  stage('SCM Checkout') {
+    echo 'QA'
+    git 'https://github.com/mohith418/Test'
+  }
+  
+ stage('Test') {
+ bat 'copy C:\\Users\\mohit\\.jenkins\\workspace\\Sample_pipeline\\IP-Soap-project.xml F:\\Test\\new'
+ bat 'F:\\SoapUI-5.6.0\\bin\\testrunner.bat -sIP_TestSuite F:\\Test\\IP-Soap-project.xml"'
+  }
+ 
+  stage('Deploy') {
+    echo 'make publish'
+  }
+}
